@@ -1,3 +1,13 @@
+// *************** Efficient solution using the HashMap ******************
+/*
+Algorithm :
+Step 1 : START
+Step 2 : Use an HashMap to store the number as key and its frequency as value
+Step 3 : If the value for particular key becomes more than 2 than increment count and also make arr[i] = Integer.MAX_VALUE
+Step 4 : Now just sort the resultant array in ascending order and return nums.length-count;
+Step 5 : STOP
+ */
+
 package February;
 
 import java.util.Arrays;
