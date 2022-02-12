@@ -7,6 +7,7 @@
 package February;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Feb_11_Permutation_in_String {
     public static HashMap<Character , Integer> freq(String s){
@@ -22,7 +23,7 @@ public class Feb_11_Permutation_in_String {
         }
         return hash;
     }
-    public boolean checkInclusion(String s1, String s2) {
+    public static boolean checkInclusion(String s1, String s2) {
         HashMap<Character , Integer> hash1 = new HashMap<>();
         for(int i = 0 ; i < s1.length() ; i++){
             char ch = s1.charAt(i);
@@ -42,5 +43,16 @@ public class Feb_11_Permutation_in_String {
                 return true;
         }
         return false;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your first string");
+        String str1 = sc.next();
+        System.out.println("Enter your second string");
+        String str2 = sc.next();
+        if(checkInclusion(str1 , str2))
+            System.out.println("YES");
+        else
+            System.out.println("NO");
     }
 }
