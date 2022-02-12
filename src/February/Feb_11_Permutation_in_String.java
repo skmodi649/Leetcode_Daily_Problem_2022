@@ -1,5 +1,5 @@
 // ******* Efficient solution ****************
-// Own devised alogrithm
+// Own devised Alogrithm
 // Difficulty : Medium
 // Concept : A string is permutation of another string only if frequencies of all the characters is same
 
