@@ -13,16 +13,26 @@ public class Feb_20_Remove_Closed_Interval {
                 intervals[i][j] = sc.nextInt();
             }
         }
-        Arrays.sort(intervals,
-                (a,b)->(a[0]==b[0]?b[1]-a[1]:a[0]-b[0]));
-        int max=intervals[0][1];
-        int count=1;
-
-        for(int i=1;i<intervals.length;i++){
-            if(max<intervals[i][1] ){
-                count++;
-                max=intervals[i][1];
+        int row = intervals .length;
+        boolean[] check = new boolean[row];
+        for(int i = 0; i < row ;i++){
+            if(!check[i]){
+                for(int j = i + 1;j < row ; j++){
+                    if(!check[j]){
+                        if(intervals[i][0]<=intervals[j][0] && intervals[j][1]<=intervals[i][1]){
+                            check[j] = true;
+                        }
+                        else if(intervals[i][0]>=intervals[j][0] && intervals[j][1]>=intervals[i][1]){
+                            check[i] = true;
+                        }
+                    }
+                }
             }
+        }
+        int count = 0;
+        for(int a = 0 ; a < check.length ; a++){
+            if(!check[a])
+                count++;
         }
         System.out.println(count);
     }
