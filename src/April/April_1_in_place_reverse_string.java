@@ -2,8 +2,10 @@
 
 package April;
 
+import java.util.Scanner;
+
 public class April_1_in_place_reverse_string {
-    public void reverseString(char[] s) {
+    public static void reverseString(char[] s) {
         int left = 0;
         int right = s.length-1;
         while(left<right) {
@@ -13,5 +15,11 @@ public class April_1_in_place_reverse_string {
             left++;
             right--;
         }
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the string : ");
+        String str = sc.next();
+        reverseString(str.toCharArray());
     }
 }
