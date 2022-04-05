@@ -1,4 +1,5 @@
 package April;
+import java.util.Scanner;
 
 public class April_5_Container_with_most_water {
     public int maxArea(int[] height) {
@@ -22,5 +23,16 @@ public class April_5_Container_with_most_water {
         }
         return max;
     }
-
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the height of the array : ");
+        int n = sc.nextInt();
+        int[] height = new int[n];
+        System.out.println("Enter the height for each container : ");
+        for(int i = 0 ; i < n ; i++){
+            height[i] = sc.nextInt();
+        }
+        April_5_Container_with_most_water obj = new April_5_Container_with_most_water();
+        System.out.println(obj.maxArea(height));
+    }
 }
